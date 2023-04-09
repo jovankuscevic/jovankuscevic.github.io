@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text to image</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+</head>
+<body>
+    <script>
+
+
+var userInput = prompt("Enter text to convert to image:");
+
+
+var canvas = document.createElement("canvas");
+canvas.width = 400;
+canvas.height = 100;
+
+
+var ctx = canvas.getContext("2d");
+ctx.font = "30px Minecraft";
+
+
+ctx.fillText(userInput, 10, 50);
+
+
+var img = canvas.toDataURL("image/png");
+document.write("<img src='" + img + "' alt='text to image'>");
+</script>
+
+</body>
+</html>
+
